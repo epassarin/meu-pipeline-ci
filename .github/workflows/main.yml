@@ -1,0 +1,16 @@
+name: Meu Primeiro Robô CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  verificacoes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v4
+
+      - name: Rodar aplicação
+        run: node app.js
